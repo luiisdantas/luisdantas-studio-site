@@ -407,6 +407,24 @@
   border-radius: 0;
 }
 
+/* Contained image (for portrait/smaller images that shouldn't stretch fullwidth) */
+.case-image--contained {
+  padding: 24px 0;
+}
+
+@media (min-width: 768px) {
+  .case-image--contained { padding: 32px 0; }
+}
+
+.case-image--contained img {
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
 /* ═══════════════════════════════════════════════════════════════
    DELIVERABLES
    ═══════════════════════════════════════════════════════════════ */
