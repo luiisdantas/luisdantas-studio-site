@@ -82,6 +82,7 @@ function initSmoothScroll() {
       if (targetId === '#') {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, '', window.location.pathname);
         return;
       }
 
@@ -89,9 +90,26 @@ function initSmoothScroll() {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
+        // Clean the # from the URL after scrolling
+        setTimeout(() => {
+          history.replaceState(null, '', window.location.pathname);
+        }, 800);
       }
     });
   });
+
+  // Also clean hash on page load (e.g. coming from another page with /#cases)
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          history.replaceState(null, '', window.location.pathname);
+        }, 800);
+      }, 100);
+    }
+  }
 }
 
 /* ── Active nav link based on scroll position ────────────────── */
