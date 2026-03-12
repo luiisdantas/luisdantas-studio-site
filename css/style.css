@@ -568,6 +568,26 @@ button {
   color: var(--text-body);
 }
 
+a.case-card--featured {
+  display: grid;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-card__arrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 16px;
+  transition: transform var(--transition);
+}
+
+.case-card--featured:hover .case-card__arrow {
+  transform: translateX(4px);
+}
+
 .cases__cta {
   text-align: center;
   margin-top: 48px;
