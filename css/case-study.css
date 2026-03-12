@@ -385,15 +385,25 @@
 }
 
 /* Real images inside gallery */
-.case-gallery__grid img,
-.case-image--full img {
+.case-gallery__grid img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: var(--radius);
 }
 
+.case-gallery__grid--2 img {
+  aspect-ratio: 16 / 10;
+}
+
+.case-gallery__grid--3 img {
+  aspect-ratio: 3 / 4;
+}
+
 .case-image--full img {
+  width: 100%;
+  display: block;
   border-radius: 0;
 }
 
