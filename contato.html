@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — luisdantas.studio</title>
+  <meta name="description" content="Vamos conversar sobre o seu projeto. Preencha o formulário e você será redirecionado para o WhatsApp com a mensagem já pronta.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- EmailJS — substitua YOUR_PUBLIC_KEY abaixo -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ──────────────────────────────────────────────────────────────
+    // CONFIGURAÇÃO EMAILJS
+    // 1. Crie conta gratuita em emailjs.com
+    // 2. Adicione serviço Gmail → copie o Service ID
+    // 3. Crie um template com as variáveis abaixo → copie o Template ID
+    // 4. Vá em Account → copie a Public Key
+    // ──────────────────────────────────────────────────────────────
+    (function () {
+      emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' });
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">luisdantas<span class="header__logo-dot">.studio</span></a>
+
+      <nav class="header__nav" id="nav">
+        <a href="/cases/" class="header__link">Cases</a>
+        <a href="/#processo" class="header__link">Processo</a>
+        <a href="/#sobre" class="header__link">Sobre</a>
+        <a href="/contato" class="header__link active header__link--cta">Contato</a>
+      </nav>
+
+      <button class="header__menu-btn" id="menu-btn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero dark-section">
+    <div class="page-hero__blob page-hero__blob--1"></div>
+    <div class="container page-hero__inner">
+      <p class="section-label reveal--load">Contato</p>
+      <h1 class="page-hero__title line-mask-parent reveal--load" style="transition-delay: 0.15s;">
+        <span class="line-mask"><span class="line-mask__inner">Vamos criar algo</span></span>
+        <span class="line-mask line-mask--d1"><span class="line-mask__inner"><em>que funciona.</em></span></span>
+      </h1>
+      <p class="page-hero__desc reveal--load" style="transition-delay: 0.45s;">
+        Preencha o formulário abaixo. Você será redirecionado ao WhatsApp com a mensagem já escrita.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO + INFO -->
+  <section class="contato-page-body dark-section">
+    <div class="contato__blob contato__blob--1"></div>
+    <div class="container">
+      <div class="contato__inner">
+
+        <!-- Info lateral -->
+        <div class="contato-info reveal">
+          <div>
+            <p class="section-label">Como funciona</p>
+            <div class="contato-info__steps">
+              <div class="contato-info__step">
+                <span class="contato-info__step-num">1</span>
+                <p><strong>Preencha o formulário</strong> com seu nome, email e uma breve descrição do projeto.</p>
+              </div>
+              <div class="contato-info__step">
+                <span class="contato-info__step-num">2</span>
+                <p><strong>Clique em enviar</strong> e você será redirecionado ao WhatsApp com a mensagem já escrita.</p>
+              </div>
+              <div class="contato-info__step">
+                <span class="contato-info__step-num">3</span>
+                <p><strong>Confirme o envio</strong> no WhatsApp. Respondo em até 24 horas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contato-info__divider"></div>
+
+          <p class="contato-info__text">
+            Prefere mandar uma mensagem direta?
+          </p>
+          <a href="https://wa.me/5541999999999" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" style="align-self: flex-start;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Abrir WhatsApp direto
+          </a>
+
+          <div class="contato-info__divider"></div>
+
+          <div class="contato-info__social">
+            <a href="https://www.instagram.com/luisdantas.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.linkedin.com/in/luiisdantas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <form class="contato__form reveal reveal--d1" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nome *</label>
+            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="project_type">Tipo de projeto *</label>
+            <select id="project_type" name="project_type" required>
+              <option value="" disabled selected>Selecione o tipo de projeto</option>
+              <option value="Branding Completo (Identidade Visual + Plataforma de Marca + Planejamento)">Branding Completo</option>
+              <option value="Identidade Visual">Identidade Visual</option>
+              <option value="Plataforma de Marca">Plataforma de Marca</option>
+              <option value="Social Media & Estratégia de Conteúdo">Social Media & Estratégia</option>
+              <option value="Site">Site</option>
+              <option value="Outro">Outro / Quero entender melhor</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Conte sobre seu projeto *</label>
+            <textarea id="message" name="message" rows="5" required
+              placeholder="Descreva brevemente seu negócio e o que você busca. Quanto mais contexto, melhor."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+            Enviar e conversar no WhatsApp &rarr;
+          </button>
+
+          <p class="contato__form-note">
+            Ao enviar, você será redirecionado ao WhatsApp com a mensagem já preenchida. Uma cópia é enviada para o email de contato.
+          </p>
+
+          <div id="form-feedback" style="display: none;"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">luisdantas<span>.studio</span></a>
+      <div class="footer__links">
+        <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.instagram.com/luisdantas.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/luiisdantas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 luisdantas.studio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ──────────────────────────────────────────────────────────────
+    // CONFIGURAÇÃO — edite estes três valores com os seus IDs do EmailJS
+    // ──────────────────────────────────────────────────────────────
+    var EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+    var EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+    var WHATSAPP_PHONE      = '5541999999999'; // seu número com DDI+DDD
+
+    // ──────────────────────────────────────────────────────────────
+    // Formulário → Email + WhatsApp
+    // ──────────────────────────────────────────────────────────────
+    (function () {
+      var form      = document.getElementById('contact-form');
+      var submitBtn = document.getElementById('submit-btn');
+      var feedback  = document.getElementById('form-feedback');
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var name        = form.name.value.trim();
+        var email       = form.email.value.trim();
+        var projectType = form.project_type.value;
+        var message     = form.message.value.trim();
+
+        if (!name || !email || !projectType || !message) {
+          showFeedback('Preencha todos os campos antes de continuar.', 'error');
+          return;
+        }
+
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+
+        // 1. Envia email via EmailJS (captura o lead mesmo se WhatsApp não for enviado)
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name:    name,
+          from_email:   email,
+          project_type: projectType,
+          message:      message
+        }).catch(function () {
+          // falha silenciosa — o redirecionamento para WhatsApp acontece de qualquer forma
+        });
+
+        // 2. Monta mensagem do WhatsApp e redireciona
+        var whatsappText = [
+          'Olá, Luis! Me chamo *' + name + '*.',
+          '',
+          '*Projeto:* ' + projectType,
+          '',
+          message,
+          '',
+          '*Email para retorno:* ' + email
+        ].join('\n');
+
+        var whatsappUrl = 'https://wa.me/' + WHATSAPP_PHONE + '?text=' + encodeURIComponent(whatsappText);
+
+        // Pequeno delay para garantir que o emailjs disparou
+        setTimeout(function () {
+          window.location.href = whatsappUrl;
+        }, 400);
+      });
+
+      function showFeedback(msg, type) {
+        feedback.textContent = msg;
+        feedback.style.cssText = [
+          'display: block',
+          'margin-top: 12px',
+          'padding: 12px 16px',
+          'border-radius: 6px',
+          'font-size: 0.88rem',
+          'text-align: center',
+          type === 'error'
+            ? 'background: rgba(212,135,109,0.12); color: #D4876D;'
+            : 'background: rgba(37,211,102,0.12); color: #25D366;'
+        ].join(';');
+
+        setTimeout(function () { feedback.style.display = 'none'; }, 5000);
+      }
+    })();
+  </script>
+</body>
+</html>

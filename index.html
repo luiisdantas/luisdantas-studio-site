@@ -9,7 +9,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="luisdantas.studio — Branding que vai além do bonito: ele funciona.">
-  <meta property="og:description" content="Sistemas completos de identidade visual com estratégia de marca para empresas que estão prontas para se posicionar de verdade.">
+  <meta property="og:description" content="Sistemas completos de identidade visual com estratégia de marca para empresas prontas para se posicionar de verdade.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://luisdantas.studio">
   <meta property="og:image" content="assets/images/og-image.jpg">
@@ -56,18 +56,16 @@
 </head>
 <body>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- HEADER / NAV                            -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#" class="header__logo">luisdantas<span class="header__logo-dot">.studio</span></a>
 
       <nav class="header__nav" id="nav">
-        <a href="#cases" class="header__link">Cases</a>
+        <a href="/cases/" class="header__link">Cases</a>
         <a href="#processo" class="header__link">Processo</a>
         <a href="#sobre" class="header__link">Sobre</a>
-        <a href="#contato" class="header__link header__link--cta">Contato</a>
+        <a href="/contato" class="header__link header__link--cta">Contato</a>
       </nav>
 
       <button class="header__menu-btn" id="menu-btn" aria-label="Abrir menu">
@@ -78,33 +76,41 @@
     </div>
   </header>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- HERO                                    -->
-  <!-- ════════════════════════════════════════ -->
-  <section class="hero" id="hero">
+  <!-- HERO (dark) -->
+  <section class="hero dark-section" id="hero">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+
     <div class="container hero__inner">
-      <p class="hero__label">Identidade Visual & Estratégia de Marca</p>
-      <h1 class="hero__title">Sua marca merece mais do que <em>parecer</em> bonita.</h1>
-      <p class="hero__subtitle">Crio sistemas completos de identidade visual com estratégia de marca — para empresas que estão prontas para se posicionar de verdade.</p>
-      <div class="hero__ctas">
+      <p class="hero__label reveal--load">Identidade Visual & Estratégia de Marca</p>
+
+      <h1 class="hero__title line-mask-parent reveal--load" style="transition-delay: 0.15s;">
+        <span class="line-mask"><span class="line-mask__inner">Sua marca merece</span></span>
+        <span class="line-mask line-mask--d1"><span class="line-mask__inner">mais do que <em>parecer</em> bonita.</span></span>
+      </h1>
+
+      <p class="hero__subtitle reveal--load" style="transition-delay: 0.5s;">
+        Branding estratégico é a fundação do crescimento. Crio sistemas completos de identidade visual que comunicam com clareza, atraem os clientes certos e fazem cada real em marketing render mais.
+      </p>
+
+      <div class="hero__ctas reveal--load" style="transition-delay: 0.65s;">
         <a href="#cases" class="btn btn--primary">Ver cases</a>
         <a href="#contato" class="btn btn--secondary">Vamos conversar?</a>
       </div>
     </div>
+
     <div class="hero__scroll-indicator">
       <span></span>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- O QUE ENTREGO                           -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- SERVICES (light) -->
   <section class="services" id="servicos">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">O que entrego</p>
-        <h2 class="section-title">Não entrego logo.<br>Entrego <em>sistema</em>.</h2>
-        <p class="section-description">Cada projeto inclui três camadas que funcionam juntas: identidade visual aplicável, plataforma de marca estruturada e planejamento de 12 meses. Porque design sem fundamento estratégico é só estética — funciona por sorte.</p>
+      <div class="section-header">
+        <p class="section-label reveal">O que entrego</p>
+        <h2 class="section-title mask-wipe">Não entrego logo.<br>Entrego <em>sistema.</em></h2>
+        <p class="section-description reveal reveal--d1">Cada projeto inclui três camadas que funcionam juntas: identidade visual aplicável, plataforma de marca estruturada e planejamento de 12 meses. Design sem estratégia é apenas estética. Com estratégia, é vantagem competitiva.</p>
       </div>
 
       <div class="services__grid">
@@ -117,10 +123,10 @@
             </svg>
           </div>
           <h3 class="service-card__title">Identidade Visual</h3>
-          <p class="service-card__text">Logo, paleta, tipografia e elementos gráficos que comunicam com coerência em qualquer contexto.</p>
+          <p class="service-card__text">Logo, paleta, tipografia e elementos gráficos que comunicam com coerência em qualquer contexto — do digital ao impresso.</p>
         </div>
 
-        <div class="service-card reveal">
+        <div class="service-card reveal reveal--d1">
           <div class="service-card__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
@@ -129,31 +135,63 @@
             </svg>
           </div>
           <h3 class="service-card__title">Plataforma de Marca</h3>
-          <p class="service-card__text">Propósito, valores, personas, posicionamento e tom de voz. O que guia todas as decisões de comunicação.</p>
+          <p class="service-card__text">Propósito, valores, personas, posicionamento e tom de voz. O que guia todas as decisões de comunicação da sua empresa.</p>
         </div>
 
-        <div class="service-card reveal">
+        <div class="service-card reveal reveal--d2">
           <div class="service-card__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
           </div>
           <h3 class="service-card__title">Planejamento Estratégico</h3>
-          <p class="service-card__text">Roadmap de 12 meses com tipos de conteúdo, sazonalidades e direcionamento para o time executar sozinho.</p>
+          <p class="service-card__text">Roadmap de 12 meses com tipos de conteúdo, sazonalidades e direcionamento para o seu time executar com autonomia.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- CASES                                   -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- MANIFESTO (dark — ponte entre serviços e cases) -->
+  <section class="manifesto dark-section" id="manifesto">
+    <div class="manifesto__blob manifesto__blob--1"></div>
+    <div class="manifesto__blob manifesto__blob--2"></div>
+
+    <div class="container">
+      <div class="manifesto__headline line-mask-parent reveal">
+        <span class="line-mask"><span class="line-mask__inner">Branding estratégico</span></span>
+        <span class="line-mask line-mask--d1"><span class="line-mask__inner">não é custo.</span></span>
+        <span class="line-mask line-mask--d2"><span class="line-mask__inner">É a fundação <em>do crescimento.</em></span></span>
+      </div>
+
+      <div class="manifesto__cards">
+        <div class="glass-card manifesto__card reveal">
+          <span class="manifesto__card-num">01</span>
+          <h3>Marketing que acumula</h3>
+          <p>Sem posicionamento claro, cada campanha começa do zero. Com marca estratégica, o marketing não recomeça a cada mês.</p>
+        </div>
+
+        <div class="glass-card manifesto__card reveal reveal--d1">
+          <span class="manifesto__card-num">02</span>
+          <h3>Autoridade construída</h3>
+          <p>Identidade coerente em todos os pontos de contato constrói autoridade de forma contínua, sem esforço adicional.</p>
+        </div>
+
+        <div class="glass-card manifesto__card reveal reveal--d2">
+          <span class="manifesto__card-num">03</span>
+          <h3>Vendas mais qualificadas</h3>
+          <p>Posicionamento estratégico atrai os clientes certos e naturalmente afasta os que geram atrito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES (light) -->
   <section class="cases" id="cases">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">Cases</p>
-        <h2 class="section-title">Trabalho demonstrado é melhor que qualquer argumento.</h2>
-        <p class="section-description">Cada case mostra as decisões estratégicas por trás do visual — não só o resultado final.</p>
+      <div class="section-header">
+        <p class="section-label reveal">Cases</p>
+        <h2 class="section-title mask-wipe">Trabalho demonstrado<br>é melhor que qualquer argumento.</h2>
+        <p class="section-description reveal reveal--d1">Cada case mostra as decisões estratégicas por trás do visual, não só o resultado final.</p>
       </div>
 
       <div class="cases__grid">
@@ -164,7 +202,7 @@
           <div class="case-card__content">
             <p class="case-card__label">Identidade Visual & Estratégia de Marca</p>
             <h3 class="case-card__title">The Golden Grill</h3>
-            <p class="case-card__text">Marca artesanal de hambúrgueres. O desafio era criar identidade que comunicasse qualidade premium sem parecer genérica num mercado saturado. A solução começou pela plataforma de marca — definir exatamente para quem era a marca e o que ela deveria provocar — antes de criar um único elemento visual.</p>
+            <p class="case-card__text">Marca artesanal de hambúrgueres. O desafio era criar identidade que comunicasse qualidade premium sem parecer genérica num mercado saturado. A solução começou pela plataforma de marca, antes de criar um único elemento visual.</p>
             <div class="case-card__tags">
               <span>Pesquisa</span>
               <span>Plataforma de Marca</span>
@@ -177,72 +215,77 @@
       </div>
 
       <div class="cases__cta reveal">
-        <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Ver portfólio completo no Behance &rarr;</a>
+        <a href="/cases/" class="btn btn--outline">Ver todos os cases &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- PROCESSO                                -->
-  <!-- ════════════════════════════════════════ -->
-  <section class="processo" id="processo">
+  <!-- PROCESSO (dark + glass cards) -->
+  <section class="processo dark-section" id="processo">
+    <div class="processo__blob processo__blob--1"></div>
+    <div class="processo__blob processo__blob--2"></div>
+
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label">Processo</p>
-        <h2 class="section-title">Três semanas. Cinco etapas.<br><em>Sem achismo.</em></h2>
+      <div class="section-header">
+        <p class="section-label reveal">Processo</p>
+        <h2 class="section-title mask-wipe">Cinco etapas.<br><em>Sem achismo.</em></h2>
+        <p class="section-description reveal reveal--d1">Cada projeto segue o mesmo método estruturado, do entendimento profundo do negócio à entrega completa dos arquivos. Nada é inventado no meio do caminho.</p>
       </div>
 
-      <div class="timeline">
-        <div class="timeline__item reveal">
-          <div class="timeline__number">01</div>
-          <div class="timeline__content">
-            <h3>Imersão</h3>
-            <p>Reunião para entender o negócio em profundidade — histórico, desafios, objetivos e público.</p>
+      <div class="processo__steps">
+        <div class="glass-card processo__step reveal">
+          <div class="processo__step-num">01</div>
+          <div>
+            <h3 class="processo__step-title">Imersão</h3>
+            <p class="processo__step-body">Mais do que uma reunião de briefing. É um mergulho no negócio: como você opera, quem são seus clientes de verdade, o que diferencia você na prática e onde quer chegar nos próximos anos. Perguntas que a maioria dos designers nunca faz.</p>
+            <span class="processo__step-tag">90 minutos</span>
           </div>
         </div>
 
-        <div class="timeline__item reveal">
-          <div class="timeline__number">02</div>
-          <div class="timeline__content">
-            <h3>Briefing</h3>
-            <p>Documentação estruturada de tudo que foi levantado. Nada fica perdido, nada é baseado em suposição.</p>
+        <div class="glass-card processo__step reveal reveal--d1">
+          <div class="processo__step-num">02</div>
+          <div>
+            <h3 class="processo__step-title">Briefing</h3>
+            <p class="processo__step-body">Tudo que levantamos vira documentação estruturada. Nada fica na memória. Nada é baseado em suposição. O briefing é o mapa que orienta cada decisão estratégica do projeto — e que você pode consultar a qualquer momento.</p>
+            <span class="processo__step-tag">Documento entregue</span>
           </div>
         </div>
 
-        <div class="timeline__item reveal">
-          <div class="timeline__number">03</div>
-          <div class="timeline__content">
-            <h3>Debriefing</h3>
-            <p>Apresentação de pesquisa de concorrentes + moodboard. Você aprova a estratégia <strong>antes</strong> de qualquer criação visual.</p>
+        <div class="glass-card processo__step reveal reveal--d2">
+          <div class="processo__step-num">03</div>
+          <div>
+            <h3 class="processo__step-title">Debriefing</h3>
+            <p class="processo__step-body">Apresento pesquisa de mercado, análise dos concorrentes e um moodboard estratégico, não estético. Você aprova a direção antes que qualquer pixel seja criado. O visual que vem depois tem fundamento, não achismo.</p>
+            <span class="processo__step-tag">Aprovação antes da criação</span>
           </div>
         </div>
 
-        <div class="timeline__item reveal">
-          <div class="timeline__number">04</div>
-          <div class="timeline__content">
-            <h3>Desenvolvimento</h3>
-            <p>Criação simultânea de identidade visual, plataforma de marca e planejamento estratégico de 12 meses.</p>
+        <div class="glass-card processo__step reveal reveal--d3">
+          <div class="processo__step-num">04</div>
+          <div>
+            <h3 class="processo__step-title">Desenvolvimento</h3>
+            <p class="processo__step-body">Com a estratégia validada, construo os três pilares em paralelo: identidade visual aplicável em todos os contextos, plataforma de marca completa com propósito, valores e tom de voz, e planejamento de 12 meses com tipos de conteúdo e sazonalidades.</p>
+            <span class="processo__step-tag">Os três pilares juntos</span>
           </div>
         </div>
 
-        <div class="timeline__item reveal">
-          <div class="timeline__number">05</div>
-          <div class="timeline__content">
-            <h3>Entrega</h3>
-            <p>Sistema completo com guidelines, arquivos em todos os formatos e orientações para seu time executar com autonomia.</p>
+        <div class="glass-card processo__step reveal reveal--d4">
+          <div class="processo__step-num">05</div>
+          <div>
+            <h3 class="processo__step-title">Entrega e Handoff</h3>
+            <p class="processo__step-body">Todos os arquivos em todos os formatos, guidelines completo e uma sessão de handoff dedicada. O projeto termina quando o seu time consegue executar com total autonomia, não quando os arquivos são entregues.</p>
+            <span class="processo__step-tag">Autonomia para o seu time</span>
           </div>
         </div>
       </div>
 
       <div class="processo__cta reveal">
-        <a href="#contato" class="btn btn--secondary">Quer entender melhor como funciona?</a>
+        <a href="#contato" class="btn btn--secondary">Tem alguma dúvida sobre o processo?</a>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- SOBRE                                   -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- SOBRE (light) -->
   <section class="sobre" id="sobre">
     <div class="container">
       <div class="sobre__inner reveal">
@@ -251,35 +294,47 @@
             <span>LD</span>
           </div>
         </div>
+
         <div class="sobre__content">
           <p class="section-label">Sobre</p>
-          <h2 class="section-title">Luis Dantas</h2>
-          <p>Designer de identidade visual e estratégia de marca baseado em Curitiba.</p>
-          <p>Comecei a perceber um padrão frustrante no mercado: empresas recebiam logos bonitos e manuais bem-feitos, mas continuavam sem clareza sobre como se comunicar, para quem e por quê. O visual estava pronto. A estratégia, não.</p>
-          <p>Por isso estruturei um processo diferente — onde a pesquisa vem antes do desenho, e a estratégia define o visual, não o contrário.</p>
+          <h2 class="section-title mask-wipe">Luis Dantas</h2>
+
+          <p>Designer de identidade visual e estratégia de marca baseado em Curitiba. Trabalho com empresas que estão prontas para crescer com intenção.</p>
+
+          <p>Comecei a notar um padrão frustrante no mercado: empresas recebiam logos bonitos e manuais bem-feitos, mas continuavam sem clareza sobre como se comunicar, para quem e por quê. O visual estava pronto. A estratégia, não.</p>
+
+          <p>Esse vazio tem um custo real. Marketing sem posicionamento é desperdício. Conteúdo sem tom de voz definido é ruído. Uma equipe comercial sem uma narrativa coerente perde negócios que deveria fechar.</p>
+
+          <p>Por isso estruturei um processo diferente: a pesquisa vem antes do design, a estratégia define o visual, e o projeto só termina quando o seu time está preparado para executar com consistência, sem depender de mim para cada decisão.</p>
+
           <p><strong>Trabalho com empresas que estão prontas para se posicionar de verdade.</strong> Se esse é o seu momento, faz sentido a gente conversar.</p>
+
+          <div class="sobre__cta">
+            <a href="#contato" class="btn btn--primary">Vamos conversar</a>
+            <a href="#cases" class="btn btn--secondary-light">Ver os cases</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- CONTATO                                 -->
-  <!-- ════════════════════════════════════════ -->
-  <section class="contato" id="contato">
+  <!-- CONTATO (dark) -->
+  <section class="contato dark-section" id="contato">
+    <div class="contato__blob contato__blob--1"></div>
+
     <div class="container">
       <div class="contato__inner">
         <div class="contato__text reveal">
           <p class="section-label">Contato</p>
           <h2 class="section-title">Pronto para criar uma marca que <em>funciona</em>?</h2>
-          <p class="section-description">Conta um pouco sobre seu projeto. Se fizer sentido pra gente trabalhar junto, seguimos para uma conversa sem compromisso.</p>
+          <p class="section-description">Conta um pouco sobre o seu projeto. Se fizer sentido trabalharmos juntos, seguimos para uma conversa sem compromisso.</p>
           <a href="https://wa.me/5541999999999?text=Ol%C3%A1%20Luis!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20marca." class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Conversar pelo WhatsApp
           </a>
         </div>
 
-        <form class="contato__form reveal" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contato__form reveal reveal--d1" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required placeholder="Seu nome">
@@ -299,9 +354,7 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- FOOTER                                  -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <a href="#" class="footer__logo">luisdantas<span>.studio</span></a>
@@ -316,7 +369,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>

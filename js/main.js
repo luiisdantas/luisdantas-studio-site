@@ -3,6 +3,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initLoadAnimations();
   initRevealAnimations();
   initHeaderScroll();
   initMobileMenu();
@@ -11,11 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* ── Reveal on Scroll (Intersection Observer) ────────────────── */
-function initRevealAnimations() {
-  const reveals = document.querySelectorAll('.reveal');
+/* ── Load animations (hero — above the fold) ─────────────────── */
+function initLoadAnimations() {
+  const loadEls = document.querySelectorAll('.reveal--load');
 
-  if (!reveals.length) return;
+  loadEls.forEach((el, i) => {
+    const baseDelay = parseFloat(el.style.transitionDelay) || i * 0.15;
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, baseDelay * 1000 + 80);
+  });
+}
+
+/* ── Scroll-triggered reveals ────────────────────────────────── */
+function initRevealAnimations() {
+  const targets = document.querySelectorAll('.reveal:not(.reveal--load), .mask-wipe, .line-mask-parent');
+
+  if (!targets.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -25,25 +38,20 @@ function initRevealAnimations() {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -48px 0px'
   });
 
-  reveals.forEach((el) => observer.observe(el));
+  targets.forEach((el) => observer.observe(el));
 }
 
 /* ── Header scroll effect ────────────────────────────────────── */
 function initHeaderScroll() {
   const header = document.getElementById('header');
-
   if (!header) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 60) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 60);
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
@@ -54,7 +62,6 @@ function initHeaderScroll() {
 function initMobileMenu() {
   const menuBtn = document.getElementById('menu-btn');
   const nav = document.getElementById('nav');
-
   if (!menuBtn || !nav) return;
 
   menuBtn.addEventListener('click', () => {
@@ -63,7 +70,6 @@ function initMobileMenu() {
     document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close menu when clicking a link
   nav.querySelectorAll('.header__link').forEach((link) => {
     link.addEventListener('click', () => {
       menuBtn.classList.remove('open');
@@ -73,7 +79,7 @@ function initMobileMenu() {
   });
 }
 
-/* ── Smooth scroll for anchor links ──────────────────────────── */
+/* ── Smooth scroll ───────────────────────────────────────────── */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
@@ -90,7 +96,6 @@ function initSmoothScroll() {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
-        // Clean the # from the URL after scrolling
         setTimeout(() => {
           history.replaceState(null, '', window.location.pathname);
         }, 800);
@@ -98,7 +103,6 @@ function initSmoothScroll() {
     });
   });
 
-  // Also clean hash on page load (e.g. coming from another page with /#cases)
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);
     if (target) {
@@ -112,23 +116,18 @@ function initSmoothScroll() {
   }
 }
 
-/* ── Active nav link based on scroll position ────────────────── */
+/* ── Active nav link ─────────────────────────────────────────── */
 function initActiveNavLink() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.header__link');
-
   if (!sections.length || !navLinks.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-
         navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
       }
     });
@@ -140,10 +139,9 @@ function initActiveNavLink() {
   sections.forEach((section) => observer.observe(section));
 }
 
-/* ── Contact form handling ───────────────────────────────────── */
+/* ── Contact form ────────────────────────────────────────────── */
 function initContactForm() {
   const form = document.getElementById('contact-form');
-
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
@@ -151,8 +149,6 @@ function initContactForm() {
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-
-    // Basic validation
     const name = form.querySelector('#name').value.trim();
     const contact = form.querySelector('#contact').value.trim();
     const message = form.querySelector('#message').value.trim();
@@ -162,7 +158,6 @@ function initContactForm() {
       return;
     }
 
-    // Show loading
     submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
 
@@ -189,7 +184,6 @@ function initContactForm() {
 }
 
 function showFormMessage(form, message, type) {
-  // Remove existing message
   const existing = form.querySelector('.form-message');
   if (existing) existing.remove();
 
@@ -202,11 +196,10 @@ function showFormMessage(form, message, type) {
     padding: 12px;
     border-radius: 6px;
     margin-top: 8px;
-    background: ${type === 'success' ? 'rgba(37, 211, 102, 0.15)' : 'rgba(212, 135, 109, 0.15)'};
+    background: ${type === 'success' ? 'rgba(37, 211, 102, 0.12)' : 'rgba(212, 135, 109, 0.12)'};
     color: ${type === 'success' ? '#25D366' : '#D4876D'};
   `;
 
   form.appendChild(el);
-
   setTimeout(() => el.remove(), 5000);
 }

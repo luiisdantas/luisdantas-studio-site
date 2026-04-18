@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cases — luisdantas.studio</title>
+  <meta name="description" content="Portfolio de identidade visual e estratégia de marca. Branding, social media e sites para empresas em crescimento.">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">luisdantas<span class="header__logo-dot">.studio</span></a>
+
+      <nav class="header__nav" id="nav">
+        <a href="/cases/" class="header__link active">Cases</a>
+        <a href="/#processo" class="header__link">Processo</a>
+        <a href="/#sobre" class="header__link">Sobre</a>
+        <a href="/contato" class="header__link header__link--cta">Contato</a>
+      </nav>
+
+      <button class="header__menu-btn" id="menu-btn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero dark-section">
+    <div class="page-hero__blob page-hero__blob--1"></div>
+    <div class="page-hero__blob page-hero__blob--2"></div>
+    <div class="container page-hero__inner">
+      <p class="section-label reveal--load">Portfolio</p>
+      <h1 class="page-hero__title line-mask-parent reveal--load" style="transition-delay: 0.15s;">
+        <span class="line-mask"><span class="line-mask__inner">Trabalho que</span></span>
+        <span class="line-mask line-mask--d1"><span class="line-mask__inner">fala <em>por si.</em></span></span>
+      </h1>
+      <p class="page-hero__desc reveal--load" style="transition-delay: 0.45s;">
+        Cada projeto documentado com as decisões estratégicas por trás do resultado visual. Nada de portfólio estético sem contexto.
+      </p>
+    </div>
+  </section>
+
+  <!-- CASES LISTING -->
+  <section class="cases-listing-section">
+    <div class="container">
+
+      <!-- Filtros -->
+      <div class="cases-filter reveal">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="social-media">Social Media & Estratégia</button>
+        <button class="filter-btn" data-filter="sites">Sites</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="cases-listing-grid" id="cases-grid">
+
+        <!-- The Golden Grill -->
+        <article class="case-item reveal" data-category="branding">
+          <a href="the-golden-grill.html" class="case-item__link">
+            <div class="case-item__image">
+              <img src="../assets/images/cases/the-golden-grill/hero-product.jpg"
+                   alt="The Golden Grill — Identidade visual para hamburgueria artesanal premium"
+                   loading="lazy">
+              <div class="case-item__overlay"><span>Ver case →</span></div>
+            </div>
+            <div class="case-item__info">
+              <span class="case-item__category">Branding</span>
+              <h3 class="case-item__title">The Golden Grill</h3>
+              <p class="case-item__desc">Identidade premium para hamburgueria artesanal. Do posicionamento estratégico ao sistema visual completo.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Mensagem de vazio (aparece quando filtro não tem resultado) -->
+        <div class="cases-empty" id="cases-empty" style="display: none;">
+          <span>Em breve</span>
+          Cases desta categoria chegam em breve.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">luisdantas<span>.studio</span></a>
+      <div class="footer__links">
+        <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.instagram.com/luisdantas.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/luiisdantas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 luisdantas.studio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const caseItems  = document.querySelectorAll('.case-item');
+      const emptyEl    = document.getElementById('cases-empty');
+
+      function applyFilter(category) {
+        let visible = 0;
+        caseItems.forEach(item => {
+          const match = category === 'todos' || item.dataset.category === category;
+          item.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        emptyEl.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyFilter(btn.dataset.filter);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
