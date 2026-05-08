@@ -21,7 +21,7 @@
   --bg-dark: #0B0B0F;
   --bg-dark-2: #0F0F16;
   --text-dark: #F0EDE8;
-  --text-dark-body: rgba(240, 237, 232, 0.58);
+  --text-dark-body: rgba(240, 237, 232, 0.72);
   --border-dark: rgba(255, 255, 255, 0.08);
 
   /* Glass */
@@ -139,6 +139,7 @@ button {
 .dark-section .section-title { color: var(--text-dark); }
 .dark-section .section-title em { color: var(--accent); }
 .dark-section .section-description { color: var(--text-dark-body); }
+.dark-section p { color: var(--text-dark-body); }
 
 /* ── Glass Card ──────────────────────────────────────────────── */
 .glass-card {
@@ -193,7 +194,7 @@ button {
 .btn--secondary {
   background-color: transparent;
   color: var(--text-dark);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
 }
 
 .btn--secondary:hover {

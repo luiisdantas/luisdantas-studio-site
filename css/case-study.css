@@ -165,6 +165,7 @@
    ═══════════════════════════════════════════════════════════════ */
 .case-section {
   padding: 80px 0;
+  background-color: var(--bg);
 }
 
 @media (min-width: 768px) {
