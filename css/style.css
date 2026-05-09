@@ -261,8 +261,9 @@ button {
 
 /* Mask wipe — clip-path reveal for section titles */
 .mask-wipe {
-  clip-path: inset(0 0 105% 0);
-  transition: clip-path 1s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: clip-path;
 }
 
 .mask-wipe.visible {
@@ -699,8 +700,12 @@ button {
    CASES  (light section)
    ═══════════════════════════════════════════════════════════════ */
 .cases {
-  padding: 112px 0;
+  padding: 72px 0;
   background-color: var(--bg);
+}
+
+.cases .section-header {
+  margin-bottom: 40px;
 }
 
 .cases__grid {
