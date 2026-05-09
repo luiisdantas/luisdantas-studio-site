@@ -839,6 +839,214 @@
 
     .ps-post-thumb:hover img { transform: scale(1.04); }
 
+    /* Full-size post sections */
+    .ps-post-section {
+      margin-top: 32px;
+    }
+
+    .ps-post-section + .ps-post-section {
+      margin-top: 36px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(169,145,199,0.2);
+    }
+
+    .ps-post-section__type {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ps-lavanda-dark);
+      background: var(--ps-lavanda-light);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+
+    .ps-post-section__title {
+      font-family: var(--ps-font-titulo);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--ps-grafite);
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+
+    .ps-post-section__slides {
+      display: flex;
+      gap: 5px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--ps-lavanda) transparent;
+      scroll-snap-type: x mandatory;
+    }
+
+    .ps-post-section__slides::-webkit-scrollbar { height: 3px; }
+    .ps-post-section__slides::-webkit-scrollbar-track { background: transparent; }
+    .ps-post-section__slides::-webkit-scrollbar-thumb { background: var(--ps-lavanda); border-radius: 2px; }
+
+    .ps-full-slide {
+      flex-shrink: 0;
+      width: 240px;
+      aspect-ratio: 4 / 5;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #1a1a1a;
+      scroll-snap-align: start;
+    }
+
+    @media (min-width: 640px) { .ps-full-slide { width: 280px; } }
+    @media (min-width: 1024px) { .ps-full-slide { width: 320px; } }
+
+    .ps-full-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ps-post-insight {
+      margin-top: 14px;
+      padding: 16px 20px;
+      background: white;
+      border-left: 3px solid var(--ps-lavanda);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .ps-post-insight p {
+      font-size: 0.875rem;
+      line-height: 1.75;
+      color: var(--ps-chumbo);
+      margin: 0;
+    }
+
+    /* Highlights full grid */
+    .ps-highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 640px) { .ps-highlights-grid { grid-template-columns: repeat(5, 1fr); gap: 20px; } }
+    @media (min-width: 1024px) { .ps-highlights-grid { grid-template-columns: repeat(9, 1fr); gap: 16px; } }
+
+    .ps-highlight-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ps-highlight-card__img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--ps-lavanda);
+      box-shadow: 0 4px 12px rgba(169,145,199,0.25);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+
+    .ps-highlight-card__img:hover {
+      box-shadow: 0 6px 20px rgba(169,145,199,0.4);
+      transform: translateY(-2px);
+    }
+
+    .ps-highlight-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .ps-highlight-card__name {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--ps-grafite);
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    .ps-highlight-card__desc {
+      font-size: 0.62rem;
+      line-height: 1.5;
+      color: var(--ps-chumbo);
+      text-align: center;
+      opacity: 0.8;
+      display: none;
+    }
+
+    @media (min-width: 640px) { .ps-highlight-card__desc { display: block; } }
+
+    /* Campaign section */
+    .ps-campaign-section {
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(169,145,199,0.2);
+    }
+
+    .ps-campaign-section__tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ps-malva);
+      background: rgba(212,165,196,0.15);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .ps-campaign-section__title {
+      font-family: var(--ps-font-titulo);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ps-grafite);
+      margin: 0 0 14px;
+      line-height: 1.3;
+    }
+
+    /* Stories row */
+    .ps-story-row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .ps-story-row::-webkit-scrollbar { display: none; }
+
+    .ps-story-item {
+      flex-shrink: 0;
+      width: 160px;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--ps-bege);
+    }
+
+    @media (min-width: 640px) { .ps-story-item { width: 200px; } }
+
+    .ps-story-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ps-story-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ps-grafite);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 28px 0 8px;
+    }
+
     /* ══════════════════════════════════════════════════════════════════
        8. ENTREGÁVEIS
     ══════════════════════════════════════════════════════════════════ */
@@ -1582,52 +1790,103 @@
         </div>
       </div>
 
-      <!-- Post gallery -->
-      <div style="margin-top:48px;">
-        <span class="ps-section-label ps-reveal" style="margin-bottom:20px;">Conteúdo Produzido — Exemplos Reais</span>
+      <!-- Posts do feed — full size com análise estratégica -->
+      <div style="margin-top:32px;">
+        <span class="ps-section-label ps-reveal" style="margin-bottom:6px;">Conteúdo Produzido — Análise Real</span>
 
-        <!-- IMAGENS: posts do feed -->
-        <!-- Arquivos: post-17dez-01.png ao post-22dez-06.png e campanha-maes-01.png -->
-        <div class="ps-post-gallery ps-reveal">
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-01.png"
-                 alt="Carrossel Cuidados Capilares — Capa"
-                 onerror="this.parentElement.style.background='var(--ps-lavanda-light)'">
+        <!-- Carrossel 17/Dez -->
+        <div class="ps-post-section ps-reveal">
+          <span class="ps-post-section__type">Carrossel Educativo · Pilar: Expertise</span>
+          <h3 class="ps-post-section__title">5 Cuidados Essenciais nas Festas de Fim de Ano</h3>
+          <div class="ps-post-section__slides">
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-01.png" alt="Slide 1 — Capa" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-02.png" alt="Slide 2 — Proteção Térmica" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-03.png" alt="Slide 3 — Hidratação" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-04.png" alt="Slide 4 — Dica 3" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-05.png" alt="Slide 5 — Dicas 4 e 5" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-06.png" alt="Slide 6 — CTA Final" loading="lazy">
+            </div>
           </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-02.png"
-                 alt="Carrossel — Proteção Térmica"
-                 onerror="this.parentElement.style.background='var(--ps-bege)'">
+          <div class="ps-post-insight">
+            <p>A temporada de festas é o pico de danos capilares do ano — chapinhas em 230°C, penteados com muita laca, ar-condicionado intenso. Esse carrossel nasceu de uma estratégia clara: <strong>educar antes de vender</strong>. Cada slide traduz dado técnico em linguagem acessível, sem soar professoral. O resultado é um post projetado para ser salvo — uma das métricas que mais importam no algoritmo do Instagram. A CTA final "Salva esse post para consultar antes da sua próxima festa" não é frase de efeito: é instrução direta que converte engajamento passivo em intenção de agendamento.</p>
           </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-17dez-06.png"
-                 alt="Carrossel — CTA Final"
-                 onerror="this.parentElement.style.background='var(--ps-nude)'">
+        </div>
+
+        <!-- Carrossel 22/Dez -->
+        <div class="ps-post-section ps-reveal ps-reveal-d1">
+          <span class="ps-post-section__type">Carrossel Educativo · Pilar: Urgência Real</span>
+          <h3 class="ps-post-section__title">Cabelo no Verão: Proteja Agora ou Pague Depois</h3>
+          <div class="ps-post-section__slides">
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-01.png" alt="Slide 1 — Capa" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-02.png" alt="Slide 2 — O problema" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-03.png" alt="Slide 3 — A solução" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-04.png" alt="Slide 4 — A matemática" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-05.png" alt="Slide 5 — Comparação" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-06.png" alt="Slide 6 — CTA" loading="lazy">
+            </div>
           </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-01.png"
-                 alt="Carrossel Verão — Capa"
-                 onerror="this.parentElement.style.background='var(--ps-lavanda-light)'">
+          <div class="ps-post-insight">
+            <p>A lógica desse carrossel é financeira antes de ser capilar. O slide da comparação — <strong>R$80 em proteção agora versus R$400 em tratamentos de emergência depois</strong> — foi desenhado para ser salvo e compartilhado, gerando até 3× mais salvamentos do que posts genéricos sobre o mesmo tema. A abordagem evita o tom punitivo: a CTA "se o seu cabelo já está pedindo socorro, não se culpa" reforça o posicionamento de safe space do Studio. Educação + acolhimento + urgência real: a fórmula que transforma seguidoras em clientes.</p>
           </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-05.png"
-                 alt="Carrossel Verão — Comparação"
-                 onerror="this.parentElement.style.background='var(--ps-bege)'">
+        </div>
+
+        <!-- Campanha Dia das Mães -->
+        <div class="ps-post-section ps-reveal ps-reveal-d2">
+          <span class="ps-post-section__type" style="color:var(--ps-malva);background:rgba(212,165,196,0.15);">Campanha Especial · Maio 2026</span>
+          <h3 class="ps-post-section__title">Sorteio Dia das Mães — Um Dia Completo de Beleza</h3>
+          <p style="font-size:0.85rem;color:var(--ps-chumbo);margin:-4px 0 12px;max-width:600px;line-height:1.7;">Funil completo em carrossel: seguir + curtir + marcar amplifica o alcance, e o bônus de agendamento até 08/05 converte engajamento em receita <em>antes mesmo do resultado</em>. Cada slide elimina uma objeção em sequência.</p>
+          <div class="ps-post-section__slides">
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-01.png" alt="Campanha Dia das Mães — Capa" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-02.png" alt="Campanha Dia das Mães — O Prêmio" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-03.png" alt="Campanha Dia das Mães — Como Participar" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-04.png" alt="Campanha Dia das Mães — Bônus de Agendamento" loading="lazy">
+            </div>
+            <div class="ps-full-slide">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-05.png" alt="Campanha Dia das Mães — Encerramento" loading="lazy">
+            </div>
           </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-01.png"
-                 alt="Campanha Dia das Mães — Capa"
-                 onerror="this.parentElement.style.background='var(--ps-pessego)'">
-          </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-02.png"
-                 alt="Campanha Dia das Mães — O Prêmio"
-                 onerror="this.parentElement.style.background='var(--ps-malva)';this.style.opacity='.3'">
-          </div>
-          <div class="ps-post-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-03.png"
-                 alt="Campanha Dia das Mães — Emoção"
-                 onerror="this.parentElement.style.background='var(--ps-nude)'">
+
+          <p class="ps-story-label">Stories — Urgência Progressiva</p>
+          <p style="font-size:0.8rem;color:var(--ps-chumbo);margin:-4px 0 12px;line-height:1.65;max-width:520px;">Publicados em dias distintos para manter o Studio no topo dos stories durante toda a semana — criando urgência crescente até o encerramento.</p>
+          <div class="ps-story-row">
+            <div class="ps-story-item">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-story-02.jpeg" alt="Story Dia das Mães — Dia 2" loading="lazy">
+            </div>
+            <div class="ps-story-item">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-story-03.jpeg" alt="Story Dia das Mães — Dia 3" loading="lazy">
+            </div>
+            <div class="ps-story-item">
+              <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-story-04.jpeg" alt="Story Dia das Mães — Dia 4" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -1774,116 +2033,123 @@
   ════════════════════════════════════════════════════ -->
   <section class="ps-section ps-section--bege" id="galeria">
     <div class="ps-container">
-      <span class="ps-section-label ps-reveal">Galeria</span>
+      <span class="ps-section-label ps-reveal">Visual e Estratégia</span>
       <h2 class="ps-h2 ps-reveal ps-reveal-d1">A marca aplicada. <em style="font-style:italic;color:var(--ps-lavanda-dark)">Visual que fala.</em></h2>
 
-      <!-- Destaques Instagram -->
+      <!-- Destaques Instagram — todos os 9 -->
       <div style="margin-top:40px;" class="ps-reveal">
         <p class="ps-gallery-title">Capas de Destaques do Instagram</p>
-        <!-- IMAGENS: capas de destaques (círculos do Instagram) -->
-        <!-- Arquivos: destaque-*.jpg -->
-        <div class="ps-highlights">
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-transformacoes.jpg" alt="Destaque Transformações">
+        <p style="font-size:0.85rem;color:var(--ps-chumbo);margin:-8px 0 20px;max-width:600px;line-height:1.7;">Os 9 destaques foram ordenados como um funil de descoberta: quem visita o perfil pela primeira vez encontra <strong>Sobre Nós → Serviços → Transformações</strong> — respondendo em sequência "quem é?", "o que faz?" e "funciona?". Meta: mais de 40% dos visitantes abrindo pelo menos 1 destaque.</p>
+        <div class="ps-highlights-grid">
+          <div class="ps-highlight-card ps-reveal">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-sobre-nos.jpg" alt="Destaque Sobre Nós" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Transformações</span>
+            <div class="ps-highlight-card__name">Sobre Nós</div>
+            <div class="ps-highlight-card__desc">Apresenta a Priscila e a proposta do Studio. Primeiro passo do funil.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-servicos.jpg" alt="Destaque Serviços">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d1">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-servicos.jpg" alt="Destaque Serviços" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Serviços</span>
+            <div class="ps-highlight-card__name">Serviços</div>
+            <div class="ps-highlight-card__desc">Cardápio completo com preços. Elimina objeções antes do DM.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-depoimentos.jpg" alt="Destaque Depoimentos">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d2">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-transformacoes.jpg" alt="Destaque Transformações" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Depoimentos</span>
+            <div class="ps-highlight-card__name">Transformações</div>
+            <div class="ps-highlight-card__desc">Antes e depois como prova social visual. Vende sem precisar falar.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-bastidores.jpg" alt="Destaque Bastidores">
+          <div class="ps-highlight-card ps-reveal">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-depoimentos.jpg" alt="Destaque Depoimentos" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Bastidores</span>
+            <div class="ps-highlight-card__name">Depoimentos</div>
+            <div class="ps-highlight-card__desc">Validação social com histórias reais de clientes.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-valores.jpg" alt="Destaque Valores">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d1">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-bastidores.jpg" alt="Destaque Bastidores" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Valores</span>
+            <div class="ps-highlight-card__name">Bastidores</div>
+            <div class="ps-highlight-card__desc">Humaniza a marca. Cria conexão autêntica.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-dicas.jpg" alt="Destaque Dicas">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d2">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-valores.jpg" alt="Destaque Valores" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Dicas</span>
+            <div class="ps-highlight-card__name">Valores</div>
+            <div class="ps-highlight-card__desc">Pilares do Studio. Posicionamento premium traduzido visualmente.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-sobre-nos.jpg" alt="Destaque Sobre Nós">
+          <div class="ps-highlight-card ps-reveal">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-dicas.jpg" alt="Destaque Dicas" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Sobre Nós</span>
+            <div class="ps-highlight-card__name">Dicas</div>
+            <div class="ps-highlight-card__desc">Conteúdo educativo salvo como referência. Autoridade constante.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-localizacao.jpg" alt="Destaque Localização">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d1">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-localizacao.jpg" alt="Destaque Localização" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Localização</span>
+            <div class="ps-highlight-card__name">Localização</div>
+            <div class="ps-highlight-card__desc">Facilita a visita física. Remove barreira geográfica.</div>
           </div>
-          <div class="ps-highlight-item">
-            <div class="ps-highlight-circle">
-              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-contato.jpg" alt="Destaque Contato">
+          <div class="ps-highlight-card ps-reveal ps-reveal-d2">
+            <div class="ps-highlight-card__img">
+              <img src="/assets/images/cases/studio-priscila-sabadin/destaque-contato.jpg" alt="Destaque Contato" loading="lazy">
             </div>
-            <span class="ps-highlight-label">Contato</span>
+            <div class="ps-highlight-card__name">Contato</div>
+            <div class="ps-highlight-card__desc">Converte interesse em agendamento. Último passo do funil.</div>
           </div>
         </div>
       </div>
 
-      <!-- Campanha Dia das Mães -->
-      <div style="margin-top:48px;" class="ps-reveal ps-reveal-d1">
-        <p class="ps-gallery-title">Campanha — Sorteio Dia das Mães 2026</p>
-        <!-- IMAGENS: slides da campanha Dia das Mães -->
-        <!-- Arquivos: campanha-maes-01.png ao campanha-maes-03.png + campanha-maes-story.jpeg -->
-        <div class="ps-slides-row">
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-01.png" alt="Campanha Dia das Mães — Capa">
-          </div>
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-02.png" alt="Campanha Dia das Mães — O Prêmio">
-          </div>
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-03.png" alt="Campanha Dia das Mães — Emoção">
-          </div>
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/campanha-maes-story.jpeg" alt="Story — Campanha Dia das Mães">
-          </div>
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-01.png" alt="Carrossel Verão — Capa">
-          </div>
-          <div class="ps-slide-thumb">
-            <img src="/assets/images/cases/studio-priscila-sabadin/post-22dez-06.png" alt="Carrossel Verão — CTA">
-          </div>
+      <!-- Artes internas — Serviços -->
+      <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(169,145,199,0.2);" class="ps-reveal">
+        <p class="ps-gallery-title">Artes — Destaque Serviços</p>
+        <p style="font-size:0.85rem;color:var(--ps-chumbo);margin:-8px 0 16px;max-width:560px;line-height:1.7;">Cada slide do destaque apresenta um serviço com visual próprio — garantindo que a cliente já chegue ao agendamento sabendo exatamente o que escolher.</p>
+        <div class="ps-story-row">
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-01.jpg" alt="Serviços — Capa" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-02.jpg" alt="Serviços — Mechas" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-03.jpg" alt="Serviços — Coloração" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-04.jpg" alt="Serviços — Progressiva" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-05.jpg" alt="Serviços — Tratamentos" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-servicos-06.jpg" alt="Serviços — Corte" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Artes internas — Valores -->
+      <div style="margin-top:40px;" class="ps-reveal ps-reveal-d1">
+        <p class="ps-gallery-title">Artes — Destaque Valores</p>
+        <p style="font-size:0.85rem;color:var(--ps-chumbo);margin:-8px 0 16px;max-width:560px;line-height:1.7;">O destaque Valores comunica os pilares do Studio sem texto corporativo — cada slide traduz um valor em experiência visual, reforçando o posicionamento premium a cada toque.</p>
+        <div class="ps-story-row">
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-01.jpg" alt="Valores — Abertura" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-02.jpg" alt="Valores — Slide 2" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-03.jpg" alt="Valores — Slide 3" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-04.jpg" alt="Valores — Slide 4" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-05.jpg" alt="Valores — Slide 5" loading="lazy"></div>
+          <div class="ps-story-item"><img src="/assets/images/cases/studio-priscila-sabadin/arte-valores-06.jpg" alt="Valores — Slide 6" loading="lazy"></div>
         </div>
       </div>
 
       <!-- Prova real do trabalho -->
-      <div style="margin-top:48px;" class="ps-reveal ps-reveal-d2">
-        <p class="ps-gallery-title">Prova Real — Documentos Entregues</p>
-        <!-- IMAGENS: screenshots dos documentos estratégicos -->
-        <!-- Arquivos: prova-01.jpeg ao prova-04.jpeg -->
+      <div style="margin-top:56px;padding-top:48px;border-top:1px solid rgba(169,145,199,0.2);" class="ps-reveal ps-reveal-d2">
+        <p class="ps-gallery-title">Prova Real — Documentação Entregue</p>
         <div class="ps-proof-grid">
           <div class="ps-proof-item">
-            <img src="/assets/images/cases/studio-priscila-sabadin/prova-01.jpeg" alt="Documentação estratégica — exemplo 1">
+            <img src="/assets/images/cases/studio-priscila-sabadin/prova-01.jpeg" alt="Documentação estratégica — exemplo 1" loading="lazy">
           </div>
           <div class="ps-proof-item">
-            <img src="/assets/images/cases/studio-priscila-sabadin/prova-02.jpeg" alt="Documentação estratégica — exemplo 2">
+            <img src="/assets/images/cases/studio-priscila-sabadin/prova-02.jpeg" alt="Documentação estratégica — exemplo 2" loading="lazy">
           </div>
           <div class="ps-proof-item">
-            <img src="/assets/images/cases/studio-priscila-sabadin/prova-03.jpeg" alt="Documentação estratégica — exemplo 3">
+            <img src="/assets/images/cases/studio-priscila-sabadin/prova-03.jpeg" alt="Documentação estratégica — exemplo 3" loading="lazy">
           </div>
           <div class="ps-proof-item">
-            <img src="/assets/images/cases/studio-priscila-sabadin/prova-04.jpeg" alt="Documentação estratégica — exemplo 4">
+            <img src="/assets/images/cases/studio-priscila-sabadin/prova-04.jpeg" alt="Documentação estratégica — exemplo 4" loading="lazy">
           </div>
         </div>
       </div>
@@ -1930,6 +2196,22 @@
     </div>
   </section>
 
+
+  <!-- CASE NAVIGATION -->
+  <nav class="case-nav" aria-label="Navegar entre cases">
+    <div class="container case-nav__inner">
+      <a href="/cases/luis-bernardelli" class="case-nav__item case-nav__item--prev">
+        <span class="case-nav__dir">← Case anterior</span>
+        <span class="case-nav__label">Branding</span>
+        <strong class="case-nav__title">Luis Bernardelli</strong>
+      </a>
+      <a href="/cases/" class="case-nav__item case-nav__item--next">
+        <span class="case-nav__dir">Ver todos →</span>
+        <span class="case-nav__label">Portfolio</span>
+        <strong class="case-nav__title">Todos os cases</strong>
+      </a>
+    </div>
+  </nav>
 
   <!-- ════════════════════════════════════════════════════
        FOOTER (site chrome)

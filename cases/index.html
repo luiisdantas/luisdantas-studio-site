@@ -98,7 +98,7 @@
         </article>
 
         <!-- Studio Priscila Sabadin -->
-        <article class="case-item reveal reveal--d2" data-category="social-media">
+        <article class="case-item reveal reveal--d2" data-category="branding social-media">
           <a href="/cases/studio-priscila-sabadin" class="case-item__link">
             <div class="case-item__image">
               <img src="../assets/images/cases/studio-priscila-sabadin/logo-lavanda.png"
@@ -148,7 +148,7 @@
       function applyFilter(category) {
         let visible = 0;
         caseItems.forEach(item => {
-          const match = category === 'todos' || item.dataset.category === category;
+          const match = category === 'todos' || item.dataset.category.split(' ').includes(category);
           item.classList.toggle('hidden', !match);
           if (match) visible++;
         });
