@@ -1013,12 +1013,16 @@
     /* Stories row */
     .ps-story-row {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       overflow-x: auto;
-      scrollbar-width: none;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--ps-lavanda) transparent;
     }
 
-    .ps-story-row::-webkit-scrollbar { display: none; }
+    .ps-story-row::-webkit-scrollbar { height: 3px; }
+    .ps-story-row::-webkit-scrollbar-track { background: transparent; }
+    .ps-story-row::-webkit-scrollbar-thumb { background: var(--ps-lavanda); border-radius: 2px; }
 
     .ps-story-item {
       flex-shrink: 0;
