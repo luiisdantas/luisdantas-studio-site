@@ -41,8 +41,9 @@
 
       <nav class="header__nav" id="nav">
         <a href="/cases" class="header__link active">Projetos</a>
+        <a href="/servicos" class="header__link">Serviços</a>
         <a href="/#processo" class="header__link">Processo</a>
-        <a href="/#sobre" class="header__link">Sobre</a>
+        <a href="/sobre" class="header__link">Sobre</a>
         <a href="/contato" class="header__link header__link--cta">Contato</a>
       </nav>
 
@@ -65,6 +66,9 @@
       <p class="page-hero__desc reveal--load" style="transition-delay: 0.45s;">
         Cada projeto documentado com as decisões estratégicas por trás do resultado visual. Nada de portfólio estético sem contexto.
       </p>
+      <p class="page-hero__desc reveal--load" style="transition-delay: 0.6s; margin-top: 16px;">
+        Cada case documenta as decisões estratégicas por trás do visual — não só o resultado final. Porque o que não aparece na imagem é exatamente o que faz a marca funcionar.
+      </p>
     </div>
   </section>
 
@@ -75,16 +79,17 @@
       <!-- Filtros -->
       <div class="cases-filter reveal">
         <button class="filter-btn active" data-filter="todos">Todos</button>
-        <button class="filter-btn" data-filter="branding">Branding</button>
-        <button class="filter-btn" data-filter="social-media">Social Media & Estratégia</button>
-        <button class="filter-btn" data-filter="sites">Sites</button>
+        <button class="filter-btn" data-filter="branding-completo">Branding Completo</button>
+        <button class="filter-btn" data-filter="identidade-visual">Identidade Visual</button>
+        <button class="filter-btn" data-filter="food-beverage">Food &amp; Beverage</button>
+        <button class="filter-btn" data-filter="consultoria">Consultoria</button>
       </div>
 
       <!-- Grid -->
       <div class="cases-listing-grid" id="cases-grid">
 
         <!-- The Golden Grill -->
-        <article class="case-item reveal" data-category="branding">
+        <article class="case-item reveal" data-category="branding-completo food-beverage">
           <a href="/cases/the-golden-grill" class="case-item__link">
             <div class="case-item__image">
               <img src="../assets/images/cases/the-golden-grill/hero-product.jpg"
@@ -93,7 +98,7 @@
               <div class="case-item__overlay"><span>Ver case →</span></div>
             </div>
             <div class="case-item__info">
-              <span class="case-item__category">Branding</span>
+              <span class="case-item__category">Branding Completo · Food &amp; Beverage</span>
               <h3 class="case-item__title">The Golden Grill</h3>
               <p class="case-item__desc">Identidade premium para hamburgueria artesanal. Do posicionamento estratégico ao sistema visual completo.</p>
             </div>
@@ -101,7 +106,7 @@
         </article>
 
         <!-- Luis Bernardelli -->
-        <article class="case-item reveal reveal--d1" data-category="branding">
+        <article class="case-item reveal reveal--d1" data-category="branding-completo consultoria">
           <a href="/cases/luis-bernardelli" class="case-item__link">
             <div class="case-item__image">
               <img src="../assets/images/cases/luis-bernardelli/hero-cover.png"
@@ -110,7 +115,7 @@
               <div class="case-item__overlay"><span>Ver case →</span></div>
             </div>
             <div class="case-item__info">
-              <span class="case-item__category">Branding</span>
+              <span class="case-item__category">Branding Completo · Consultoria</span>
               <h3 class="case-item__title">Luis Bernardelli</h3>
               <p class="case-item__desc">Marca completa para consultor de consórcios. Da plataforma estratégica à identidade visual e ecossistema de conteúdo.</p>
             </div>
@@ -118,7 +123,7 @@
         </article>
 
         <!-- Studio Priscila Sabadin -->
-        <article class="case-item reveal reveal--d2" data-category="branding social-media">
+        <article class="case-item reveal reveal--d2" data-category="identidade-visual">
           <a href="/cases/studio-priscila-sabadin" class="case-item__link">
             <div class="case-item__image">
               <img src="../assets/images/cases/studio-priscila-sabadin/logo-lavanda.png"
@@ -128,7 +133,7 @@
               <div class="case-item__overlay"><span>Ver case →</span></div>
             </div>
             <div class="case-item__info">
-              <span class="case-item__category">Branding &amp; Estratégia Digital</span>
+              <span class="case-item__category">Identidade Visual</span>
               <h3 class="case-item__title">Studio Priscila Sabadin</h3>
               <p class="case-item__desc">Branding estratégico completo para hair studio premium — posicionamento, identidade visual, voz e 24+ documentos estratégicos.</p>
             </div>
@@ -147,14 +152,23 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a href="/" class="footer__logo">luisdantas<span>.studio</span></a>
-      <div class="footer__links">
-        <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer">Behance</a>
-        <a href="https://www.instagram.com/luisdantas.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.linkedin.com/in/luiisdantas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="container">
+      <div class="footer__top">
+        <a href="/" class="footer__logo">luisdantas<span>.studio</span></a>
+        <nav class="footer__nav">
+          <a href="/servicos">Serviços</a>
+          <a href="/sobre">Sobre</a>
+          <a href="/faq">FAQ</a>
+        </nav>
+        <div class="footer__links">
+          <a href="https://www.behance.net/luisdantas" target="_blank" rel="noopener noreferrer">Behance</a>
+          <a href="https://www.instagram.com/luisdantas.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/luiisdantas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
-      <p class="footer__copy">&copy; 2026 luisdantas.studio. Todos os direitos reservados.&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="/politica-de-privacidade">Privacidade</a></p>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 luisdantas.studio. Todos os direitos reservados.&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="/politica-de-privacidade">Privacidade</a></p>
+      </div>
     </div>
   </footer>
 
@@ -168,7 +182,8 @@
       function applyFilter(category) {
         let visible = 0;
         caseItems.forEach(item => {
-          const match = category === 'todos' || item.dataset.category.split(' ').includes(category);
+          const cats  = item.dataset.category ? item.dataset.category.split(' ') : [];
+          const match = category === 'todos' || cats.includes(category);
           item.classList.toggle('hidden', !match);
           if (match) visible++;
         });
