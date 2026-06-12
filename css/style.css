@@ -176,7 +176,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.02em;
   padding: 14px 28px;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all var(--transition);
   cursor: pointer;
   white-space: nowrap;
@@ -426,7 +426,7 @@ button {
   background-color: #1A1A1A;
   color: var(--white) !important;
   padding: 8px 20px;
-  border-radius: 0;
+  border-radius: 6px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.82rem;
@@ -529,28 +529,7 @@ button {
   .hero { align-items: center; }
 }
 
-/* Atmospheric blobs */
-.hero__blob {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero__blob--1 {
-  width: clamp(350px, 55vw, 750px);
-  height: clamp(350px, 55vw, 750px);
-  background: radial-gradient(circle, rgba(212, 135, 109, 0.13) 0%, transparent 65%);
-  top: -15%;
-  right: -10%;
-}
-
-.hero__blob--2 {
-  width: clamp(200px, 35vw, 500px);
-  height: clamp(200px, 35vw, 500px);
-  background: radial-gradient(circle, rgba(212, 135, 109, 0.07) 0%, transparent 65%);
-  bottom: 5%;
-  left: -8%;
-}
+/* No decorative blobs in hero */
 
 .hero__inner {
   padding: 64px 0 80px;
