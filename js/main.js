@@ -38,7 +38,9 @@ function initRevealAnimations() {
       }
     });
   }, {
-    threshold: 0.12,
+    /* threshold 0: elementos com clip-path (mask-wipe) reportam
+       intersectionRatio 0 mesmo na viewport — threshold > 0 nunca dispara */
+    threshold: 0,
     rootMargin: '0px 0px -48px 0px'
   });
 
@@ -196,8 +198,8 @@ function showFormMessage(form, message, type) {
     padding: 12px;
     border-radius: 6px;
     margin-top: 8px;
-    background: ${type === 'success' ? 'rgba(37, 211, 102, 0.12)' : 'rgba(212, 135, 109, 0.12)'};
-    color: ${type === 'success' ? '#25D366' : '#D4876D'};
+    background: rgba(212, 135, 109, 0.12);
+    color: #D4876D;
   `;
 
   form.appendChild(el);

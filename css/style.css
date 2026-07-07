@@ -75,6 +75,21 @@ a {
   text-decoration: none;
 }
 
+/* Base heading colors — light por padrão, claro em seções escuras */
+h2 {
+  color: var(--text);
+}
+
+.dark-section h2 {
+  color: var(--text-dark);
+}
+
+/* Links reais dentro de texto corrido */
+p a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 button {
   border: none;
   background: none;
@@ -244,17 +259,17 @@ button {
   color: #FFFFFF;
 }
 
-/* WhatsApp */
+/* WhatsApp — segue a paleta do site, não o verde padrão */
 .btn--whatsapp {
-  background-color: #25D366;
+  background-color: #1A1A1A;
   color: #FFFFFF;
   font-weight: 600;
-  border: 1.5px solid #25D366;
+  border: 1.5px solid #1A1A1A;
 }
 
 .btn--whatsapp:hover {
-  background-color: #1da851;
-  border-color: #1da851;
+  background-color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-1px);
 }
 
@@ -315,6 +330,18 @@ button {
 
 .line-mask-parent.visible .line-mask__inner {
   transform: translateY(0);
+}
+
+/* Sem animação: conteúdo sempre visível (acessibilidade + fallback) */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .mask-wipe,
+  .line-mask__inner {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -605,7 +632,7 @@ button {
    SERVICES  (light section)
    ═══════════════════════════════════════════════════════════════ */
 .services {
-  padding: 112px 0;
+  padding: 80px 0;
   background-color: var(--bg-alt);
 }
 
@@ -656,7 +683,7 @@ button {
    MANIFESTO  (dark section — ponte entre serviços e cases)
    ═══════════════════════════════════════════════════════════════ */
 .manifesto {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -746,7 +773,7 @@ button {
    CASES  (light section)
    ═══════════════════════════════════════════════════════════════ */
 .cases {
-  padding: 72px 0;
+  padding: 80px 0;
   background-color: var(--bg);
 }
 
@@ -870,7 +897,7 @@ button {
    PROCESSO  (dark section + glass cards)
    ═══════════════════════════════════════════════════════════════ */
 .processo {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--bg-dark-2);
   position: relative;
   overflow: hidden;
@@ -976,7 +1003,7 @@ button {
    SOBRE  (light section)
    ═══════════════════════════════════════════════════════════════ */
 .sobre {
-  padding: 112px 0;
+  padding: 96px 0;
   background-color: var(--bg);
 }
 
@@ -1059,7 +1086,7 @@ button {
    CONTATO
    ═══════════════════════════════════════════════════════════════ */
 .contato {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #F5F2ED;
   position: relative;
   overflow: hidden;
@@ -1200,7 +1227,7 @@ button {
 .case-nav__label {
   font-size: 0.7rem;
   font-weight: 500;
-  color: var(--accent, #6EE59B);
+  color: var(--accent, #D4876D);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -1327,7 +1354,7 @@ button {
    PAGE HERO  (inner pages — cases, contato)
    ═══════════════════════════════════════════════════════════════ */
 .page-hero {
-  padding: calc(var(--header-height) + 72px) 0 80px;
+  padding: calc(var(--header-height) + 56px) 0 64px;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -1548,21 +1575,26 @@ button {
   z-index: 1;
 }
 
+/* Labels claros sobre o fundo escuro da página de contato */
+.contato-page-body .form-group label {
+  color: rgba(240, 237, 232, 0.65);
+}
+
 /* Select field */
 .form-group select {
   font-family: var(--font-body);
   font-size: 0.95rem;
   padding: 14px 16px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-dark);
-  border-radius: var(--radius);
-  color: var(--text-dark);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--text);
   transition: all var(--transition);
   outline: none;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(240,237,232,0.4)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.4)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 40px;
@@ -1570,12 +1602,12 @@ button {
 
 .form-group select:focus {
   border-color: var(--accent);
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: #FAFAFA;
 }
 
 .form-group select option {
-  background-color: #1a1a24;
-  color: var(--text-dark);
+  background-color: #FFFFFF;
+  color: var(--text);
 }
 
 /* Contact info card */
@@ -1656,7 +1688,7 @@ button {
    DORES — Homepage seção A (light)
    ═══════════════════════════════════════════════════════════════ */
 .dores {
-  padding: 100px 0 80px;
+  padding: 80px 0;
   background-color: var(--bg);
 }
 
@@ -1679,11 +1711,13 @@ button {
 }
 
 .dores__list li::before {
-  content: '—';
-  color: var(--accent);
-  font-weight: 700;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
   flex-shrink: 0;
-  margin-top: 1px;
+  margin-top: 9px;
 }
 
 .dores__transition {
@@ -1787,7 +1821,7 @@ button {
    QUEM-E — Homepage seção C (dark)
    ═══════════════════════════════════════════════════════════════ */
 .quem-e {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -1879,7 +1913,7 @@ button {
    PAGE HERO (shared — /servicos, /sobre)
    ═══════════════════════════════════════════════════════════════ */
 .page-hero {
-  padding: calc(var(--header-height) + 72px) 0 80px;
+  padding: calc(var(--header-height) + 56px) 0 64px;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -1947,7 +1981,7 @@ button {
    SERVICOS PAGE
    ═══════════════════════════════════════════════════════════════ */
 .antes-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg);
 }
 
@@ -1992,7 +2026,7 @@ button {
 }
 
 .servicos-list {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-alt);
 }
 
@@ -2099,7 +2133,7 @@ button {
 }
 
 .diferencial-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -2171,7 +2205,7 @@ button {
 }
 
 .page-cta-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-dark);
   text-align: center;
   position: relative;
@@ -2207,7 +2241,7 @@ button {
    SOBRE PAGE
    ═══════════════════════════════════════════════════════════════ */
 .sobre-origem {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg);
 }
 
@@ -2225,7 +2259,7 @@ button {
 .sobre-origem__text p:last-child { margin-bottom: 0; }
 
 .sobre-apresentacao {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-alt);
 }
 
@@ -2317,7 +2351,7 @@ button {
 .sobre-apresentacao__social a:hover { opacity: 0.7; }
 
 .filosofia-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg);
 }
 
@@ -2368,7 +2402,7 @@ button {
 }
 
 .sobre-para-quem {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
