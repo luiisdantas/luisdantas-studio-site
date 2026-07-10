@@ -512,3 +512,27 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* CTA — cor de destaque do case (dourado The Golden Grill) */
+.case-cta .btn--primary {
+  background-color: #D4A437;
+  border-color: #D4A437;
+  color: #1A1A1A;
+}
+
+.case-cta .btn--primary:hover {
+  background-color: #E8B84B;
+  border-color: #E8B84B;
+  color: #1A1A1A;
+}
+
+.case-cta .btn--secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.case-cta .btn--secondary:hover {
+  background-color: #D4A437;
+  border-color: #D4A437;
+  color: #1A1A1A;
+}
