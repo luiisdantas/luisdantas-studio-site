@@ -279,23 +279,37 @@ button {
    ANIMATIONS
    ═══════════════════════════════════════════════════════════════ */
 
-/* Fade reveal — for blocks, paragraphs, cards */
-.reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
-}
+/* Fade reveal — for blocks, paragraphs, cards.
+   Entrada via animation (não transition): componentes com transition
+   própria de hover (cards, steps) não conseguem sobrescrever a entrada,
+   e o hover volta a funcionar normalmente assim que a animação termina. */
+.reveal { opacity: 0; }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
-.reveal--d1 { transition-delay: 0.1s; }
-.reveal--d2 { transition-delay: 0.22s; }
-.reveal--d3 { transition-delay: 0.34s; }
-.reveal--d4 { transition-delay: 0.46s; }
-.reveal--d5 { transition-delay: 0.58s; }
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
+.reveal--d1.visible { animation-delay: 0.08s; }
+.reveal--d2.visible { animation-delay: 0.16s; }
+.reveal--d3.visible { animation-delay: 0.24s; }
+.reveal--d4.visible { animation-delay: 0.32s; }
+.reveal--d5.visible { animation-delay: 0.4s; }
+
+/* Hero & page-heroes — entrada no load (stagger aplicado pelo JS) */
+.reveal--load { opacity: 0; }
+
+.reveal--load.visible {
+  opacity: 1;
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
 
 /* Mask wipe — clip-path reveal for section titles */
 .mask-wipe {
@@ -335,12 +349,14 @@ button {
 /* Sem animação: conteúdo sempre visível (acessibilidade + fallback) */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
+  .reveal--load,
   .mask-wipe,
   .line-mask__inner {
     opacity: 1 !important;
     transform: none !important;
     clip-path: none !important;
     transition: none !important;
+    animation: none !important;
   }
 }
 
@@ -559,13 +575,17 @@ button {
 /* No decorative blobs in hero */
 
 .hero__inner {
-  padding: 64px 0 80px;
+  padding-top: 64px;
+  padding-bottom: 80px;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 768px) {
-  .hero__inner { padding: 80px 0 120px; }
+  .hero__inner {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
 }
 
 .hero__label {

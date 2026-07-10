@@ -41,7 +41,7 @@ function initRevealAnimations() {
     /* threshold 0: elementos com clip-path (mask-wipe) reportam
        intersectionRatio 0 mesmo na viewport — threshold > 0 nunca dispara */
     threshold: 0,
-    rootMargin: '0px 0px -48px 0px'
+    rootMargin: '0px 0px -32px 0px'
   });
 
   targets.forEach((el) => observer.observe(el));
