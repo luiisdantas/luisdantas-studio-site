@@ -346,6 +346,54 @@ button {
   transform: translateY(0);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   AMBIENT MOTION — blobs vivos + grain
+   Movimento contínuo e lento nas seções escuras: os gradientes
+   flutuam/orbitam e uma textura de filme cobre o site inteiro.
+   ═══════════════════════════════════════════════════════════════ */
+@keyframes blobFloatA {
+  0%, 100% { transform: translate3d(-8%, -6%, 0) rotate(0deg); }
+  50% { transform: translate3d(10%, 8%, 0) rotate(150deg); }
+}
+
+@keyframes blobFloatB {
+  0%, 100% { transform: translate3d(6%, 4%, 0) rotate(0deg); }
+  50% { transform: translate3d(-10%, -8%, 0) rotate(-120deg); }
+}
+
+@keyframes blobOrbit {
+  0%, 100% { transform: translate3d(4%, -10%, 0) scale(1); }
+  50% { transform: translate3d(-18%, 12%, 0) scale(1.08); }
+}
+
+@keyframes blobDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(12%, -10%, 0) scale(1.12); }
+}
+
+/* Grain — textura de filme sutil, cobre o site inteiro */
+body::after {
+  content: '';
+  position: fixed;
+  inset: -100%;
+  z-index: 2000;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  animation: grainShift 9s steps(8) infinite;
+}
+
+@keyframes grainShift {
+  0% { transform: translate(0, 0); }
+  12.5% { transform: translate(-3%, -4%); }
+  25% { transform: translate(4%, 2%); }
+  37.5% { transform: translate(-2%, 5%); }
+  50% { transform: translate(5%, -2%); }
+  62.5% { transform: translate(-4%, 1%); }
+  75% { transform: translate(2%, -5%); }
+  87.5% { transform: translate(-5%, 3%); }
+}
+
 /* Sem animação: conteúdo sempre visível (acessibilidade + fallback) */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
@@ -356,6 +404,11 @@ button {
     transform: none !important;
     clip-path: none !important;
     transition: none !important;
+    animation: none !important;
+  }
+
+  body::after,
+  [class*="__blob"] {
     animation: none !important;
   }
 }
@@ -572,7 +625,32 @@ button {
   .hero { align-items: center; }
 }
 
-/* No decorative blobs in hero */
+/* Blobs do hero — luz terracota em movimento contínuo */
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.hero__blob--1 {
+  width: clamp(420px, 62vw, 880px);
+  height: clamp(420px, 62vw, 880px);
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.20) 0%, transparent 66%);
+  top: -28%;
+  right: -14%;
+  animation: blobFloatA 34s ease-in-out infinite;
+}
+
+.hero__blob--2 {
+  width: clamp(300px, 42vw, 560px);
+  height: clamp(300px, 42vw, 560px);
+  background: radial-gradient(circle, rgba(232, 176, 127, 0.12) 0%, transparent 70%);
+  bottom: -22%;
+  left: -10%;
+  animation: blobOrbit 28s ease-in-out infinite;
+}
 
 .hero__inner {
   padding-top: 64px;
@@ -2476,4 +2554,57 @@ button {
   color: var(--text-dark-body);
   margin-bottom: 0;
   font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AMBIENT MOTION — aplica movimento contínuo aos blobs existentes
+   das seções escuras (gradientes mais presentes + blend screen)
+   ═══════════════════════════════════════════════════════════════ */
+.manifesto__blob,
+.processo__blob,
+.quem-e__blob,
+.page-hero__blob,
+.diferencial__blob {
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.manifesto__blob--1 {
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.17) 0%, transparent 65%);
+  animation: blobFloatA 36s ease-in-out infinite;
+}
+
+.manifesto__blob--2 {
+  background: radial-gradient(circle, rgba(232, 176, 127, 0.10) 0%, transparent 65%);
+  animation: blobOrbit 30s ease-in-out infinite;
+}
+
+.processo__blob--1 {
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.14) 0%, transparent 65%);
+  animation: blobFloatB 38s ease-in-out infinite;
+}
+
+.processo__blob--2 {
+  background: radial-gradient(circle, rgba(232, 176, 127, 0.09) 0%, transparent 65%);
+  animation: blobDrift 32s ease-in-out infinite;
+}
+
+.quem-e__blob--1 {
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.13) 0%, transparent 70%);
+  animation: blobOrbit 34s ease-in-out infinite;
+}
+
+.page-hero__blob--1 {
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.16) 0%, transparent 65%);
+  animation: blobFloatA 36s ease-in-out infinite;
+}
+
+.page-hero__blob--2 {
+  background: radial-gradient(circle, rgba(232, 176, 127, 0.10) 0%, transparent 70%);
+  animation: blobDrift 30s ease-in-out infinite;
+}
+
+.diferencial__blob {
+  background: radial-gradient(circle, rgba(212, 135, 109, 0.13) 0%, transparent 70%);
+  animation: blobFloatB 36s ease-in-out infinite;
 }
