@@ -17,3 +17,72 @@ desktop.ini
 # Build
 dist/
 .vercel/
+
+# Fontes de design não usadas no site (mantidas localmente, fora do deploy)
+"assets/images/cases/luis-bernardelli/CAMISAS/CAMISA AZUL.jpeg"
+"assets/images/cases/luis-bernardelli/CAMISAS/CAMISA BRANCA.png"
+"assets/images/cases/luis-bernardelli/CARTÃO DE VISITA/FLAT LAY.jpeg"
+"assets/images/cases/luis-bernardelli/CARTÃO DE VISITA/FRENTE E VERSO.png"
+"assets/images/cases/luis-bernardelli/CARTÃO DE VISITA/FRENTE.png"
+"assets/images/cases/luis-bernardelli/CARTÃO DE VISITA/VERSO.png"
+"assets/images/cases/luis-bernardelli/FLAT LAYER/Flat.png"
+"assets/images/cases/luis-bernardelli/FLAT LAYER/PAPEL TIMBRADO SOLO.png"
+"assets/images/cases/luis-bernardelli/POSTS/2/Capa — Educativo.png"
+"assets/images/cases/luis-bernardelli/POSTS/2/Slide 1 — Erro 01.png"
+"assets/images/cases/luis-bernardelli/POSTS/2/Slide 2 — Erro 02.png"
+"assets/images/cases/luis-bernardelli/POSTS/2/Slide 3 — Erro 03.png"
+"assets/images/cases/luis-bernardelli/POSTS/2/Slide Final — CTA.png"
+"assets/images/cases/luis-bernardelli/POSTS/4/Capa — Carrossel Premium.png"
+"assets/images/cases/luis-bernardelli/POSTS/4/Slide 1 — O Conceito.png"
+"assets/images/cases/luis-bernardelli/POSTS/4/Slide 2 — Vantagens.png"
+"assets/images/cases/luis-bernardelli/POSTS/4/Slide 3 — A Estratégia.png"
+"assets/images/cases/luis-bernardelli/POSTS/4/Slide Final — CTA.png"
+"assets/images/cases/luis-bernardelli/POSTS/LB — Post Logo — Card Elegante Off-white.png"
+"assets/images/cases/luis-bernardelli/POSTS/LB — Post Logo — Centralizado Marinho.png"
+"assets/images/cases/luis-bernardelli/POSTS/LB — Post Logo — Elemento Gráfico Gradiente.png"
+"assets/images/cases/luis-bernardelli/POSTS/LB — Template 1 — Posicionamento.png"
+"assets/images/cases/luis-bernardelli/POSTS/LB — Template 3 — Institucional.png"
+"assets/images/cases/luis-bernardelli/POSTS/STORIES/LB — Story 01 — Posicionamento Marinho.png"
+"assets/images/cases/luis-bernardelli/POSTS/STORIES/LB — Story 02 — Educativo Off-white.png"
+"assets/images/cases/luis-bernardelli/POSTS/STORIES/LB — Story 03 — Institucional Bordeaux.png"
+"assets/images/cases/luis-bernardelli/TOTEM/LB — Outdoor — Frase de Posicionamento.png"
+"assets/images/cases/luis-bernardelli/TOTEM/LB — Totem Direito — Institucional.png"
+"assets/images/cases/luis-bernardelli/TOTEM/LB — Totem Esquerdo — Apresentação de Marca.png"
+"assets/images/cases/luis-bernardelli/TOTEM/TOTEM DUPLO.png"
+"assets/images/cases/luis-bernardelli/TOTEM/TOTEM SOLO.png"
+assets/images/cases/luis-bernardelli/businesscard-flatlay.jpg
+assets/images/cases/luis-bernardelli/businesscard-frontback.png
+assets/images/cases/luis-bernardelli/carousel-edu-cover.png
+assets/images/cases/luis-bernardelli/carousel-edu-cta.png
+assets/images/cases/luis-bernardelli/carousel-edu-slide1.png
+assets/images/cases/luis-bernardelli/carousel-premium-cover.png
+assets/images/cases/luis-bernardelli/letterhead.png
+assets/images/cases/luis-bernardelli/logo-azul-completa.png
+assets/images/cases/luis-bernardelli/logo-azul-icone.png
+assets/images/cases/luis-bernardelli/logo-azul-wordmark.png
+assets/images/cases/luis-bernardelli/logo-branca-completa.png
+assets/images/cases/luis-bernardelli/logo-branca-icone.png
+assets/images/cases/luis-bernardelli/logo-branca-wordmark.png
+assets/images/cases/luis-bernardelli/logo-gradient.png
+assets/images/cases/luis-bernardelli/logo-navy.png
+assets/images/cases/luis-bernardelli/logo-offwhite.png
+assets/images/cases/luis-bernardelli/logo-preta-completa.png
+assets/images/cases/luis-bernardelli/logo-verde-completa.png
+assets/images/cases/luis-bernardelli/logo-verde-icone.png
+assets/images/cases/luis-bernardelli/logo-verde-wordmark.png
+assets/images/cases/luis-bernardelli/outdoor.png
+assets/images/cases/luis-bernardelli/paleta-cores.jpeg
+assets/images/cases/luis-bernardelli/post-institutional.png
+assets/images/cases/luis-bernardelli/post-positioning.png
+assets/images/cases/luis-bernardelli/story-01.png
+assets/images/cases/luis-bernardelli/story-02.png
+assets/images/cases/luis-bernardelli/story-03.png
+assets/images/cases/luis-bernardelli/totem-double.png
+assets/images/cases/luis-bernardelli/totem-single.png
+assets/images/cases/luis-bernardelli/uniform-blue.jpg
+assets/images/cases/luis-bernardelli/uniform-white.png
+assets/images/cases/studio-priscila-sabadin/campanha-maes-story.jpeg
+assets/images/cases/studio-priscila-sabadin/prova-01.jpeg
+assets/images/cases/studio-priscila-sabadin/prova-02.jpeg
+assets/images/cases/studio-priscila-sabadin/prova-03.jpeg
+assets/images/cases/studio-priscila-sabadin/prova-04.jpeg
