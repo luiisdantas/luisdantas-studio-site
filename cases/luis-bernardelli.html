@@ -230,6 +230,22 @@ footer img{max-width:120px;margin-bottom:1rem;opacity:.5}
     nav.header__nav { justify-content: flex-end !important; }
     nav.footer__nav { justify-content: flex-start !important; flex-wrap: wrap !important; }
 
+    /* A navegação entre projetos também é um <nav> — neutraliza a regra
+       genérica `nav{position:fixed}` do deck e mantém o visual padrão */
+    nav.case-nav {
+      position: static !important;
+      display: block !important;
+      height: auto !important;
+      top: auto !important; left: auto !important; right: auto !important;
+      z-index: auto !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      padding: 0 !important;
+      background: #0f0f12 !important;
+      justify-content: initial !important;
+      align-items: initial !important;
+    }
+
     /* Reset presentation's `footer` rule for our site footer —
        same #1A1A1A footer as every other page */
     footer.footer {
@@ -570,6 +586,22 @@ footer img{max-width:120px;margin-bottom:1rem;opacity:.5}
       </div>
     </div>
   </section>
+
+  <!-- CASE NAVIGATION -->
+  <nav class="case-nav" aria-label="Navegar entre projetos">
+    <div class="container case-nav__inner">
+      <a href="/cases/the-golden-grill" class="case-nav__item case-nav__item--prev">
+        <span class="case-nav__dir">← Projeto anterior</span>
+        <span class="case-nav__label">Food &amp; Beverage</span>
+        <strong class="case-nav__title">The Golden Grill</strong>
+      </a>
+      <a href="/cases/studio-priscila-sabadin" class="case-nav__item case-nav__item--next">
+        <span class="case-nav__dir">Próximo projeto →</span>
+        <span class="case-nav__label">Identidade Visual</span>
+        <strong class="case-nav__title">Studio Priscila Sabadin</strong>
+      </a>
+    </div>
+  </nav>
 
   <!-- FOOTER -->
   <footer class="footer">
