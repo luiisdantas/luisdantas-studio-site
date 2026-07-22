@@ -4,7 +4,7 @@
     {
       "name": "site-dev",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3000"],
+      "runtimeArgs": ["serve", "-l", "3000", "E:/Trabalhos/Design/LUISDANTAS.STUDIO/00/luisdantas-studio-site"],
       "port": 3000
     }
   ]
